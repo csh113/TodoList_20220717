@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/list_item_shape_r6">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <com.willy.ratingbar.ScaleRatingBar
+            android:id="@+id/todoRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srb_isIndicator="true"
+            app:srb_starHeight="20dp"
+            app:srb_starWidth="20dp"
+            app:srb_stepSize="0.5" /> <!--반올림 기준 -->
+        <!--srb_isIndicator 클릭해도 값이 바뀌지 않음 -->
+
+        <!-- 별과 text 사이 간격 디자인 보기 -->
+        <TextView
+            android:id="@+id/todoTitleTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="todoTxt"
+            android:textColor="@color/warmGray_800"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+
+    <CheckBox
+        android:id="@+id/todoCb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
